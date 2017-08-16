@@ -1,11 +1,11 @@
 
-# :runner:  Hermes Keng
+#   Hermes Keng
 
 >  Take the sourest lemon that life has to offer and turn it into something resembling lemonade !
 >  
 
 
-![](https://i.imgur.com/MJh1zs6.jpg =350x) 
+![](https://i.imgur.com/MJh1zs6.jpg =250x) 
 
 * **Name** : Hermes Keng
 * **University** : National Taipei University
