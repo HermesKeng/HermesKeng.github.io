@@ -16,13 +16,17 @@
     2. Problems for which existing solutions require a lot of hand-tuning or long lists of rules
     3. Complex problems for which there is no good solution at all using a traditional approach
     4. Fluctuating environments 
+    
 ---
+
 - **Types of Machine Learning System** 
+
     - Whether or not they are trained **with human supervison**
     - Whether or not they can **learn incrementally on the fly**
     - Whether they work by simply **comparing new data points to known data points or instead detect patterns in ther training data and build a predictive modal**
 
 - **Supervised / Unsupervised Learning** 
+
     There are four major categories in Supervised / Unsupervised Learning 
     
     **1. Supervised Learning 
@@ -31,6 +35,7 @@
      4. Reinforcement Learning**
 
     - **Supervised Learning**
+    
      The Training data you feed to the algorithm includes the desired solutions called ==labels==
         1. The two most common in supervised learning
  
@@ -64,7 +69,7 @@
      
     - **Reinforcement Learning** 
     
-     Learn by itself what is best strtegy, called a ==policy==, to get the most ==reward== over time 
+     Learn by itself what is best strtegy, called a `policy`, to get the most `reward` over time 
          - Learning from mistakes and memory what is good or bad
     
     
