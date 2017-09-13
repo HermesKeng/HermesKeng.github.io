@@ -6,18 +6,18 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Hyde
+title:            Logan CS Sharing
 tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:      '分享自己在CS的所學知識'
 url:              http://hyde.getpoole.com
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Hermes'
+  url:            https://www.facebook.com/Loganning7
 
 paginate:         5
-
+timezone:         Asia/Taipei
 # Custom vars
 version:          2.1.0
 
