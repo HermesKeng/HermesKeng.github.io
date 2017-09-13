@@ -1,4 +1,3 @@
-# Swift Programming 
 
 > 本篇教學主要針對Swift的基本語法進行說明，並且進行紀錄
 > 參考書籍網址：https://www.appcoda.com/swift/ 
