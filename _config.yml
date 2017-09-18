@@ -6,11 +6,11 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Logan CS Sharing
+title:            Logan's CS Sharing
 tagline:          'A Jekyll theme'
 description:      '分享自己在CS的所學知識'
-url:
-baseurl:          https://hermeskeng.github.io
+url:              https://hermeskeng.github.io
+baseurl:          /
 
 author:
   name:           'Hermes'
