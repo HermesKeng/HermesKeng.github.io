@@ -1,6 +1,6 @@
 > **Title :** Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems
 
-> **Reference :** http://shop.oreilly.com/product/0636920052289.do
+> **Reference :** [Hands-On Machine Learning with Scikit-Learn and TensorFlow](http://shop.oreilly.com/product/0636920052289.do)
 
 
 - **What is Machine Learning ?**
@@ -53,8 +53,11 @@
         1. Four common unsupervised task
 
             **- Classification**
+
             **- Visualization**
+
             **- Dimensionality Reduction :** the goal is to simplify the data ,and merge serveral correlated features into one. This is called feature extraction
+
             **- Anomaly detection :** detect whether the data is abnormal and futherer than original clustering
 
     - **Semisupervised Learning**
@@ -64,5 +67,5 @@
 
     - **Reinforcement Learning**
 
-        Learn by itself what is best strtegy, called a ==policy==, to get the most ==reward== over time
+        Learn by itself what is best strtegy, called a `policy`, to get the most `reward` over time
           - Learning from mistakes and memory what is good or bad
