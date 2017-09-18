@@ -10,7 +10,7 @@ title:            Logan CS Sharing
 tagline:          'A Jekyll theme'
 description:      '分享自己在CS的所學知識'
 url:
-baseurl:          ‘/’
+baseurl:          https://hermeskeng.github.io
 
 author:
   name:           'Hermes'
