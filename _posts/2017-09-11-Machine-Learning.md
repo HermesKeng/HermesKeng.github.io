@@ -23,12 +23,13 @@
   - Whether they work by simply **comparing new data points to known data points or instead detect patterns in ther training data and build a predictive modal**
 
 - **Supervised / Unsupervised Learning**
+
   There are four major categories in Supervised / Unsupervised Learning
 
-      **1. Supervised Learning**
-      **2. Unsupervised Learning**
-      **3. Semisupervised Learning**
-      **4. Reinforcement Learning**
+      1. Supervised Learning
+      2. Unsupervised Learning
+      3. Semisupervised Learning
+      4. Reinforcement Learning
 
     - **Supervised Learning**
      The Training data you feed to the algorithm includes the desired solutions called ==labels==
