@@ -9,8 +9,8 @@ permalink:        pretty
 title:            Logan CS Sharing
 tagline:          'A Jekyll theme'
 description:      '分享自己在CS的所學知識'
-url:              http://hyde.getpoole.com
-baseurl:          /
+url:
+baseurl:          ‘https://hermeskeng.github.io’
 
 author:
   name:           'Hermes'
@@ -19,7 +19,7 @@ author:
 paginate:         5
 timezone:         Asia/Taipei
 # Custom vars
-version:          2.1.0
+version:          1.0.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/HermesKeng
