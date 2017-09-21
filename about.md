@@ -7,4 +7,4 @@
 
 * **Name** : Hermes Keng
 * **University** : National Taipei University
-* **Programming Language** : C,C++,C#,HTML,Javascript,Css,Android,SQL
+* **Programming Language** : C, C++, C#, HTML, Javascript, Css, Android,SQL
