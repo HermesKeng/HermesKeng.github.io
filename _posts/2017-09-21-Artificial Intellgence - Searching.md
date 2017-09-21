@@ -1,5 +1,3 @@
-# Artificial Intellgence - Searching 
-
 > Reference https://stackoverflow.com/questions/39760905/what-is-the-main-difference-between-informed-search-and-uninformed-search-algori
 >
 - **Searching**
