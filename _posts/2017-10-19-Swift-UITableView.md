@@ -5,8 +5,9 @@
     - DeleGate must adopt the **UITableViewDelegate** protocol
 - There are two styles in Table view, plain and grouped.
     - Plain style : section headers and footers float above the content if the part of a complete section is visible. **A table view can have an index that appears as a bar on the right hand side of the table (for example, "A" through "Z").**
-    - Grouped style : provides a default background color and a default background view for all cells. The background view provides a visual grouping for all cells in a particular section.
-    
+    ![Plain style example](https://github.com/HermesKeng/HermesKeng.github.io/blob/master/images/plainUITableView.PNG | width=100)
+    - Grouped style : provides a default background color and a default background view for all cells. The background view provides a visual grouping for all cells in a particular section.
+    ![Grouped style example](https://github.com/HermesKeng/HermesKeng.github.io/blob/master/images/groupedUITableView.PNG)
     
 
 # UITableViewDataSource
