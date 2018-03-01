@@ -1,4 +1,3 @@
-# Computer Network about HTTP and Web
 - HTTP (HyperText Transfer Protocal) 
     - It is the core of the Web application
     - It is implemented in two programs, client program and server program
