@@ -1,6 +1,7 @@
 
 
 > After you install mySQL database, there are some procedures you have to set up before we start to use it, for this passage we are going to tell a few procedures for everyone who uses MySQL database
+
 - Initial Setting up after you install mysql
     - Login in mySQL database ```mysql -u root```, **root** is the default user in mySQL database.
     - After connect into database, you can start to create a new account
