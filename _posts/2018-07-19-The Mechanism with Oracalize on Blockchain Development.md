@@ -40,18 +40,18 @@
           - [This Official Moniter could help people confirm whether data could be trusted](http://app.oraclize.it/service/monitor)
 
 - Some developer tools on Oraclize
-1. [Remix with orcalize](http://dapps.oraclize.it/browser-solidity/#version=soljson-v0.4.24+commit.e67f0147.js) : Orcalize provides their own Remix which plugin in their source code. There are also some source code which you can test it. To comprehend how powerful it is.
+    1. [Remix with orcalize](http://dapps.oraclize.it/browser-solidity/#version=soljson-v0.4.24+commit.e67f0147.js) : Orcalize provides their own Remix which plugin in their source code. There are also some source code which you can test it. To comprehend how powerful it is.
     - Some notification
         - For now, Oraclzie only supports for pragma 0.4.20, so if you want to compile the solidity, please change compiler to 0.4.20 version
         - Change running environment on JVM
 
-2. [Official query testing Website](http://app.oraclize.it/home/test_query)
+    2. [Official query testing Website](http://app.oraclize.it/home/test_query)
     - Simple Query command is oraclize_query()
     - A data-source such as URL,WolframAlpha, IPFS, 'Swarm' and others listed here
 
-3. [The tutorial that accesses randome number on orcalize](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e)
+    3. [The tutorial that accesses randome number on orcalize](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e)
 
-4. We aslo can use ethereum bridge to connect Oralclize with truffle
+    4. We aslo can use ethereum bridge to connect Oralclize with truffle
 
 ---
 ## Reference
