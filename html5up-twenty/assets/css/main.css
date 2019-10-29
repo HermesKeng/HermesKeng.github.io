@@ -3339,3 +3339,14 @@ input, select, textarea {
 			}
 
 	}
+	.wrapper.project-item{
+		margin-bottom: 1.5em;
+		padding: 3.5em;
+		padding-bottom: 0.3em;
+	}
+	.wrapper.project-item {
+		text-align: left;
+	}
+	.project-title{
+		margin-bottom: 0.2em;
+	}
