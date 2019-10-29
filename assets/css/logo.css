@@ -1,0 +1,157 @@
+
+.logo-container{
+  display:flex;
+  height:100%;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 1em;
+}
+.box{
+  background-color:#21212155;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.box-row{
+  display:flex;
+}
+.item{
+ width:1.5em;
+ height:1.5em;
+ border:0.05em solid #212121;
+/*  background-color:#FAFAFA; */
+}
+.item-top-edge{
+ border-top:0.1em solid #212121;
+/*  background-color:#FAFAFA; */
+}
+.item-right-edge{
+ border-right:0.1em solid #212121;
+/*  background-color:#FAFAFA; */
+}
+.item-left-edge{
+ border-left:0.1em solid #212121;
+/*  background-color:#FAFAFA; */
+}
+.item-bottom-edge{
+ border-bottom:0.1em solid #212121;
+/*  background-color:#FAFAFA; */
+}
+.animation1{
+ animation-name:appear-digit1;
+ animation-duration:4s;
+ animation-iteration-count:infinite;
+}
+.animation2{
+ animation-name:appear-digit2;
+ animation-duration:2s;
+ animation-iteration-count:infinite;
+}
+.animation3{
+ animation-name:appear-digit3;
+ animation-duration:4s;
+ animation-iteration-count:infinite;
+}
+@keyframes appear-digit1{
+  35%{
+    background-color:#FFe0b4;
+  }
+  50%{
+    background-color:#FFCA7D;
+  }
+  75%{
+    background-color:#FFA726;
+  }
+}
+@keyframes appear-digit2{
+  15%{
+    background-color:#FFE0B4;
+  }
+  50%{
+    background-color:#FFA726;
+  }
+  80%{
+    background-color:#FFA726;
+  }
+}
+/* #FFE0B4 */
+/* #FFCA7D */
+/* #FFA726 */
+/* #FF9700 */
+@keyframes appear-digit3{
+  25%{
+    background-color:#FFCA7D;
+  }
+  50%{
+    background-color:#FFA726;
+  }
+  80%{
+    background-color:#FFA726;
+  }
+}
+#subbox1{
+ background-color:#FF9700;
+}
+#subbox2{
+ background-color:#FF9700;
+}
+#subbox3{
+ background-color:#FF9700;
+}
+#subbox4{
+ background-color:#FF9700;
+}
+#subbox5{
+ background-color:#FF9700;
+}
+#subbox6{
+ background-color:#FFA726;
+}
+#subbox7{
+ background-color:#FFA726;
+}
+#subbox8{
+ background-color:#FFA726;
+}
+#subbox9{
+ background-color:#FFE0B4;
+}
+#subbox10{
+ background-color:#FFE0B4;
+}
+#subbox11{
+ background-color:#FFCA7D;
+}
+#subbox12{
+ background-color:#FFCA7D;
+}
+#subbox13{
+ background-color:#FFE0B4;
+}
+#subbox14{
+ background-color:#FF9700;
+}
+#subbox15{
+ background-color:#FFCA7D;
+}
+#subbox16{
+ background-color:#FFE0B4;
+}
+#subbox17{
+ background-color:#FF9700;
+}
+#subbox18{
+ background-color:#FFCA7D;
+}
+#subbox19{
+ background-color:#FFA726;
+}
+#subbox20{
+ background-color:#FF9700;
+}
+
+/* #FFE0B4 */
+/* #FFCA7D */
+/* #FFA726 */
+/* #FF9700 */
