@@ -3355,6 +3355,18 @@ input, select, textarea {
 	.wrapper.project-item {
 		text-align: left;
 	}
+	.wrapper.project-item:hover {
+		box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+	}
 	.project-title{
 		margin-bottom: 0.2em;
+	}
+
+	.project-title > a:link{
+		text-decoration: underline;
+	}
+	.project-title > a:hover{
+		text-decoration: underline;
+		color:#080808;
 	}
