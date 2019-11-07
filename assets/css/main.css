@@ -200,10 +200,19 @@ input, select, textarea {
 			.container {
 				width: 1200px;
 			}
-
+			.container.project-content{
+				width: 1300px;
+			}
 				.container.medium {
 					width: 900px;
 				}
+			iframe{
+				width:80%;
+				height:500px;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
 
 		}
 
@@ -216,7 +225,13 @@ input, select, textarea {
 				.container.medium {
 					width: 735px;
 				}
-
+				iframe{
+					width:80%;
+					height:450px;
+					margin-left: auto;
+					margin-right: auto;
+					display: block;
+				}
 		}
 
 		@media screen and (max-width: 980px) {
@@ -227,6 +242,13 @@ input, select, textarea {
 
 				.container.medium {
 					width: 71.25%;
+				}
+				iframe{
+					width:80%;
+					height:400px;
+					margin-left: auto;
+					margin-right: auto;
+					display: block;
 				}
 
 		}
@@ -240,7 +262,13 @@ input, select, textarea {
 				.container.medium {
 					width: 95%;
 				}
-
+				iframe{
+					width:80%;
+					height:200px;
+					margin-left: auto;
+					margin-right: auto;
+					display: block;
+				}
 		}
 
 		@media screen and (max-width: 736px) {
@@ -252,6 +280,13 @@ input, select, textarea {
 				.container.medium {
 					width: 100%;
 				}
+			iframe{
+				width:80%;
+				height:200px;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
 
 		}
 
@@ -2264,7 +2299,7 @@ input, select, textarea {
 		.wrapper.style4 {
 			background: #fff;
 			color: inherit;
-			padding: 4em;
+			padding: 3em;
 		}
 
 /* Header */
@@ -2730,6 +2765,9 @@ input, select, textarea {
 				padding: 4em 3em;
 			}
 
+				.wrapper.style4 {
+					padding: 3em;
+				}
 				.wrapper.style4 {
 					padding: 3em;
 				}
