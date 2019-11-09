@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kai-Ning Keng - LoRa Logistic Service</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Kai-Ning, Keng</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">About</a></li>
+							<li><a href="https://drive.google.com/file/d/1iGO_TyzqrfM0D2EVbxhTkQ9KnvCo8FJW/view?usp=sharing" target="_blank">CV</a></li>
+							<li><a href="#portfolio" class="scrolly">Portfolio</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<!-- One -->
+						<section class="wrapper style4 container project-content">
+
+							<!-- Content -->
+								<!-- <div class="content">
+									<section>
+										<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+										<header>
+											<h3>Dolore Amet Consequat</h3>
+										</header>
+										<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum massa. Morbi eu faucibus massa. Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
+										<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique. Sed id sem et massa ornare pellentesque. Maecenas pharetra porta accumsan. </p>
+										<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus, non hendrerit ipsum arcu tristique est.</p>
+									</section>
+								</div> -->
+								<div class="row">
+									<div class="col-5 col-12-narrower">
+										<section>
+											<header>
+												<h2><b>LoRa Logistic Service</b></h2>
+											</header>
+											<p>An IoT application to create an online to offline logistic service for a self-driving car with LoRa technology</p>
+											<ul>
+												<li>Project Period: Jul. 2016 - Jun. 2017</li>
+												<li>Project Duration: One Year</li>
+												<li>Project Supervisor: Yuh-Shyan Chen</li>
+												<li>Project Type: Group Project</li>
+											</ul>
+										</section>
+									</div>
+									<div class="col-7 col-12-narrower">
+										<a href="#" class="image featured"><img src="images/lora_logistic.jpeg" alt="" /></a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 col-12-narrower">
+										<div class="content">
+											<section>
+												<header>
+													<h3><b>Introduction</b></h3>
+												</header>
+												<p>After the emergence of the Internet of Things(IoT), many people notice about wireless network technology. LoRa technology, a low-power, wide area network technology, opens an opportunity to transmit data from a remote place to server. With this technology, more and more embedded systems can be established in our daily lives. In this project, we present a LoRa Logistic Service, an online to offline systems for users to send a packages to a destination through a mobile app and a self-driving car system with LoRa Technology. The goal of the project is to make our lives more convenient and reduce human cost of sending packages and implement the proof of the concept of logistic service on campus in order to achieve "Smart City". </p>
+												<p>
+													<iframe src="https://www.youtube.com/embed/IKHZwInGJkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</p>
+											</section>
+											<section>
+												<header>
+													<h3><b>System Design</b></h3>
+												</header>
+												<p>There are four parts in our application- a LoRa gateway, a mobile app, and a server, and a self-driving car. </p>
+												<ul>
+													<li>Server:<br>​The server is the main part of our application. The sever can send the data to the mobile app and LoRa gateways as a notification while arrivals of the time that users register a delivery service. It also includes a database to store records of registering services.</li>
+													<li>LoRa Gateway:<br>The role of Lo​Ra gateway is the mid point of server and self-driving car. The LoRa gateway can communicate with the server through a wired/wireless network. The gateway also can deliver the signals sent from the server to the self-driving car through LoRa Technology.</li>
+													<li>Server:<br>​The self-driving car is an improved version of an electronic wheel car. It includes a GPS module, a LoRa module, a Raspberry Pi, and a control handle. The LoRa module can receive messages from LoRa gateways to get a notification which requests from a user. GPS module tracks the position of the car and calculate the path from a start point to a destination with an improved A* algorithm.</li>
+													<li>Mobile App:<br>​Mobile app serves as a medium for user to utilize our service. User can track orders, register the service, and look for history records in the mobile app. It also includes an account system to maintain users' data from the service.​​​</li>
+												</ul>
+												<p>In the system, we settle a "state" mechanism in order to manage the car status in the service. The car has five different states while it is working. </p>
+												<ol>
+													<li>Establish the Order</li>
+													<li>When the car arrives at a sender's location, the car wait for a sender to give a package</li>
+													<li>After the sender give a package, the car is going to a receiver's place</li>
+													<li>When the car arrives at the receiver's location, the car wait for the receive to get the package</li>
+													<li>The receiver successfully get the package and the car complete the task.</li>
+												</ol>
+												<p>The communication between the LoRa gateway and the car is through LoRa wireless network. With LoRa Technology, data can easily be delivery in a long distance. For the 59 area of acres on campus, we merely settle one LoRa gateway to transmit data between the car and gateway back and forth. However, there is still a problem for data transmission. The data transmission between the gateway and the car relies on UDP protocol, which means the data is possibly lost in the procedure. To address issue, we implement a mechanism of reliable data transfer 3.0(RDT 3.0) to resolve the problem of losing data (Figure 2).</p>
+											</section>
+											<section>
+
+											</section>
+											<section>
+												<header>
+													<h3><b>My Role In The Project</b></h3>
+												</header>
+												<p>There are two parts of works in my senior project. For the first part,  I conduct research in how to use LoRa module with Raspberry Pi to send and receive data. I cooperate with another group member to complete the experiment to make sure the data can be sent and receive through all campus. I discover that the gateway should be installed in a high place, where can avoid losing data which sends from LoRa gateway. For the second part, I create a gateway program which data can be delivered between a self-driving car and a gateway through LoRa and between a server and a gateway with wireless network by TCP socket. Besides, I also serve as user interface designer and Android developer to design the user interface of our application and complete the front-end program of the Android app.</p>
+											</section>
+											<section>
+												<header>
+													<h3><b>Review</b></h3>
+												</header>
+												<p>From this project, I learn how to cooperate with others to create a technology application from zero to one. We come up with different ideas and try to converge diverse applications into our final application. In a long period of project development, we even use Git to make a version control in order to maintain our project efficiently. Moreover, the LoRa application makes me get concepts of coding with terminal and use command line in an embedded system. I also deepen the knowledge of creating a prototype and making an Android app.  </p>
+											</section>
+										</div>
+								</div>
+						</section>
+
+					<!-- Two -->
+						<!-- <section class="wrapper style1 container special">
+							<div class="row">
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>This is Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>Also Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>Probably Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+							</div>
+						</section> -->
+
+				</article>
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
