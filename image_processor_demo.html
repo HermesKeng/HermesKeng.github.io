@@ -36,7 +36,7 @@
 						<section class="wrapper style4 container">
 
 							<!-- Content -->
-								<div class="content">
+								<div class="content img-processing-project">
 									<section>
 
 										<header>
@@ -46,106 +46,74 @@
 										<br>In this project, you will know about edge detection and convolution calculation with visualization demonstration. </p>
 										<p>A digital image is an object which is displayed by pixel, which is a small color box. Every picture you see on your monitor is the combination of pixels. </p>
 										<p>Please move your mouse on the picture, and you can see central pixels and the neighboring 8 points of the pixel.</p>
-										<section id="img-processing-demo">
+										<section class="img-processing-demo">
 											<canvas id="ex_show_pixel" width="400" height="280"></canvas>
 											<canvas id="detail_info" width="200" height="200"></canvas>
 										</section>
 										<p>From the above example, you can find some color value of the pixels change significantly. Take the people in the image as an example, you move the cursor from the people to the sunlight, you could see pixel change noticebly from the black to orange. Edge can be defined as a local discontinuity in the pixel values which exceed a given threshold. Edge is an important information in an image. We can use it to do further calculation and detect objects.</p>
 										<p>Generally, we use edge operators to get the edge in one image. Below is some general filters for the edge detection, you can use different filters and get results. Besides, you also can upload your own image to see how it is going to be after edge detection.</p>
 										<section>
-											<div>
-										    <p>Edge Detection Filter Mask</p>
-										    <select id="filter" onchange="calFilter(value)">
-										      <option value="0">Identity</option>
-										      <option value="1">Laplacian</option>
-										      <option value="2">Prewitt x</option>
-										      <option value="3">Prewitt y</option>
-										      <option value="4">Sobel x</option>
-										      <option value="5">Sobel y</option>
-										      <option value="6">Custom</option>
-										      <option value="7">Gaussian</option>
-										    </select>
-										    <table >
-										      <tr>
-										        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
-										        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
-										        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
-										      </tr>
-										        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
-										        <td><input class="mask" type="number" min="-8" max="8" value="1" onchange="calFilter(-1)"></td>
-										        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
-										      <tr>
-										        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
-										        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
-										        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
-										      </tr>
-										    </table>
+											<div class="img-demo-custom">
+												<div class="row">
+													<div class="col-6 col-12-narrower">
+														<p>Edge Detection Filter Mask </p>
+													 	<input type='file' onchange="readFile(this)" />
+													</div>
+													<div class="col-6 col-12-narrower">
+														<p>Try Gaussian Before Image Processing</p>
+													  <label class="switch">
+													    <input id="isGfilter" type="checkbox" onchange="setGaussian()">
+													    <span class="slider"></span>
+													  </label>
+													</div>
+												</div>
+
+
+												<div class="row">
+													<div class="col-6 col-12-narrower" id="img-processing-table">
+														<select id="filter" onchange="calFilter(value)">
+												      <option value="0">Identity</option>
+												      <option value="1">Laplacian</option>
+												      <option value="2">Prewitt x</option>
+												      <option value="3">Prewitt y</option>
+												      <option value="4">Sobel x</option>
+												      <option value="5">Sobel y</option>
+												      <option value="6">Custom</option>
+												      <option value="7">Gaussian</option>
+												    </select>
+												    <table>
+												      <tr>
+												        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
+												        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
+												        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
+												      </tr>
+												        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
+												        <td><input class="mask" type="number" min="-8" max="8" value="1" onchange="calFilter(-1)"></td>
+												        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
+												      <tr>
+												        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
+												        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
+												        <td><input class="mask" type="number" min="-8" max="8" value="0" onchange="calFilter(-1)"></td>
+												      </tr>
+										    		</table>
+													</div>
+													<div class="col-6 col-12-narrower img-processing-demo" id="img-processing-ori-pic">
+													</div>
+												</div>
+												<div class="row">
+												<div class="col-6 col-12-narrower img-processing-demo" id="img-processing-gray-pic">
+												</div>
+												<div class="col-6 col-12-narrower img-processing-demo" id="img-processing-dect-pic">
+												</div>
+											</div>
 										  </div>
-											<p>You could select own picture to know the different result</p>
-										  <input type='file' onchange="readFile(this)" />
+
 										  </br>
-										  <p>Try Gaussian Before Image Processing</p>
-										  <label class="switch">
-										    <input id="isGfilter" type="checkbox" onchange="setGaussian()">
-										    <span class="slider"></span>
-										  </label>
+
 										</section>
 									</section>
 								</div>
-
 						</section>
-
-					<!-- Two -->
-						<section class="wrapper style1 container special">
-							<div class="row">
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<header>
-											<h3>This is Something</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-										<footer>
-											<ul class="buttons">
-												<li><a href="#" class="button small">Learn More</a></li>
-											</ul>
-										</footer>
-									</section>
-
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<header>
-											<h3>Also Something</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-										<footer>
-											<ul class="buttons">
-												<li><a href="#" class="button small">Learn More</a></li>
-											</ul>
-										</footer>
-									</section>
-
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<header>
-											<h3>Probably Something</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-										<footer>
-											<ul class="buttons">
-												<li><a href="#" class="button small">Learn More</a></li>
-											</ul>
-										</footer>
-									</section>
-
-								</div>
-							</div>
-						</section>
-
 				</article>
 
 			<!-- Footer -->
@@ -180,14 +148,16 @@
 			<script>
 			  var width = 400;
 			  var height = 280;
-			  var body = document.getElementsByTagName("body")[0];
+			  var old_container = document.getElementById('img-processing-ori-pic');
+				var gray_container = document.getElementById('img-processing-gray-pic');
+				var detect_container = document.getElementById('img-processing-dect-pic');
 			  var canvas=new Canvas("ex_Img",width,height);
 			  var gray_canvas = new Canvas("gray_Img",width,height);
 			  var edge_canvas = new Canvas("edge_Img",width,height);
 			  var imageFrame,ex_pixel_image,detail_info,imageData;
-			  canvas.displayCanvas(body);
-			  gray_canvas.displayCanvas(body);
-			  edge_canvas.displayCanvas(body);
+			  canvas.displayCanvas(old_container);
+			  gray_canvas.displayCanvas(gray_container);
+			  edge_canvas.displayCanvas(detect_container);
 			  var pixelImg=new Image();
 			  // The demonstration of the fundemental conept of the image pixel
 			  pixelImg.onload = function(){

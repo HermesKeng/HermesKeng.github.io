@@ -3419,15 +3419,104 @@ input, select, textarea {
 		margin-bottom: 2em;
 		width:50%;
 	}
-	#img-processing-demo{
+	.img-processing-demo{
 		display: block;
 		text-align: center;
 		margin-bottom: 1.5em;
 	}
-	.col-center-image {
+	#img-processing-table{
+		text-align: center;
+	}
+	#img-processing-table select{
+		margin-bottom: 1em;
+	}
+	#img-processing-table table{
+		width: 10em;
+		height: 10em;
+		margin-left: auto;
+		margin-right: auto;
+		border-collapse: collapse;
+		text-align: center;
+	}
+
+	#img-processing-table td{
+		border: 1px solid black;
+		text-align: center;
+	}
+	.img-processing-project .mask{
+    border: 0px;
+    font-size: 20px;
+    width: 100%;
+    align:middle;
+  }
+	.img-processing-project .col-center-image {
 	  display: block;
 	  margin-left: auto;
 	  margin-right: auto;
 		margin-bottom: 2em;
 		width:100%;
+	}
+	.img-processing-project .switch {
+	  position: relative;
+	  display: inline-block;
+	  width: 60px;
+	  height: 34px;
+	}
+
+	/* Hide default HTML checkbox */
+	.img-processing-project .switch input {display:none;}
+
+	/* The slider */
+	.img-processing-project .slider {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #ccc;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	.img-processing-project .slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 26px;
+	  width: 26px;
+	  left: 4px;
+	  bottom: 4px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	.img-processing-project input:checked + .slider {
+	  background-color: #2196F3;
+	}
+
+	.img-processing-project input:focus + .slider {
+	  box-shadow: 0 0 1px #2196F3;
+	}
+
+	.img-processing-project input:checked + .slider:before {
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.img-processing-project .slider.round {
+	  border-radius: 34px;
+	}
+
+	.img-processing-project .slider.round:before {
+	  border-radius: 50%;
+	}
+	.img-demo-custom p{
+		margin-bottom: 1.5em;
+	}
+
+	.img-demo-custom .row{
+		margin-bottom: 2.5em;
 	}
