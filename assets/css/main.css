@@ -3419,16 +3419,15 @@ input, select, textarea {
 		margin-bottom: 2em;
 		width:50%;
 	}
+	#img-processing-demo{
+		display: block;
+		text-align: center;
+		margin-bottom: 1.5em;
+	}
 	.col-center-image {
 	  display: block;
 	  margin-left: auto;
 	  margin-right: auto;
 		margin-bottom: 2em;
 		width:100%;
-	}
-
-	#img-processing-demo{
-		display: block;
-		text-align: center;
-		margin-bottom: 1.5em;
 	}
