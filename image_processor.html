@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Twenty by HTML5 UP</title>
+		<title>Kai-Ning Keng - Image Processor</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,12 +17,12 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Twenty <span>by HTML5 UP</span></a></h1>
+					<h1 id="logo"><a href="index.html">Kai-Ning, Keng</a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
-							 
-							<li><a href="#" class="button primary">Sign Up</a></li>
+							<li><a href="index.html">About</a></li>
+							<li><a href="https://drive.google.com/file/d/1iGO_TyzqrfM0D2EVbxhTkQ9KnvCo8FJW/view?usp=sharing" target="_blank">CV</a></li>
+							<li><a href="#portfolio" class="scrolly">Portfolio</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -30,17 +30,11 @@
 			<!-- Main -->
 				<article id="main">
 
-					<header class="special container">
-						<span class="icon solid fa-mobile-alt"></span>
-						<h2>And finally there's <strong>No Sidebar</strong></h2>
-						<p>Where that in the center faces the nameless horrors alone.</p>
-					</header>
-
 					<!-- One -->
-						<section class="wrapper style4 container">
+						<section class="wrapper style4 container project-content">
 
 							<!-- Content -->
-								<div class="content">
+								<!-- <div class="content">
 									<section>
 										<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
 										<header>
@@ -50,12 +44,64 @@
 										<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique. Sed id sem et massa ornare pellentesque. Maecenas pharetra porta accumsan. </p>
 										<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus, non hendrerit ipsum arcu tristique est.</p>
 									</section>
+								</div> -->
+								<div class="row">
+									<div class="col-5 col-12-narrower">
+										<section>
+											<header>
+												<h2><b>Image Processor</b></h2>
+											</header>
+											<p>A web application for simulating algorithms of edge detection and image processing</p>
+											<ul>
+												<li>Project Period: Mar. 2018 - Apr. 2018</li>
+												<li>Project Duration: One Month</li>
+												<li>Project Supervisor: Dalton Lin</li>
+												<li>Project Type: Individual Class Project</li>
+											</ul>
+										</section>
+									</div>
+									<div class="col-7 col-12-narrower">
+										<a href="#" class="image featured"><img src="images/imageprocessing.png" alt="" /></a>
+									</div>
 								</div>
+								<div class="row">
+									<div class="col-12 col-12-narrower">
+										<div class="content">
+											<section>
+												<header>
+													<h3><b>Introduction</b></h3>
+												</header>
+												<p>Image processing is an essential concept in computer vision. Each frame in a video clip will be pre-processed if a computer performs detection on human, animals, or objects from the outside world. Edge detection is a part of knowledge in the field of image processing. A computer utilizes calculations of convolution with an edge operator to achieve edge detection. The goal of the project is to demonstrate different edge operators in edge detection, such as Laplacian, Prewitt, and Sobel operators, with an input image. Therefore, in this project, to learn the image processing easily, I create a web application- Image Processor to perform an edge operator on different photos which people offer. The new learners in computer vision are able to learn the basic ideas of pixel and different algorithms of edge detection.</p>
+												<a href="image_processor_demo.html">Demo</a>
+											</section>
+											<section>
+												<header>
+													<h3><b>System Design</b></h3>
+												</header>
+												<p>In the project, there are two parts of system design - backend and frontend.</p>
+												<ul>
+													<li>Back End : I developed a backend server with NodeJs. The server can listen to client’s requests and give responses with a file system.</li>
+													<li>Front End :  I utilized canvas, a graphical approach if we render images on Web, to display image, 3x3 mask of pixels, and a result of edge detection in the website. With the technology of canvas, programmers can easily manipulate pixels with the Javascript.<br>
+														 Below is the process of the applicationan :
+														<ol class="content-list">
+															<li>The input image is transformed into grayscale image.</li>
+															<li>The edge operator is implemented on the grayscale image and produced the result image</li>
+														</ol>
+												</ul>
+												<p>Users also can customized their operators in the application. The image can be processed by Laplacian, Prewitt, and Sobel operators and be smoothed by Gaussian, and Identity filters.  In addition, users can preview and uploaded image. Users can understand the diverse effects on different images after the implementation of edge detection.</p>
+											</section>
 
+												<header>
+													<h3><b>Review</b></h3>
+												</header>
+												<p>The project not only let me take an insight into the computer vision framework and AR-kit but also know the development of an iOS app in detail. After the previous experience in my senior project (link), I start to make a prototype prior to implementation. Prototyping offers a beneficial effect on the development of a mobile app since I can understand the flow of user interfaces. Due to the time constrant, I didn't finish all function in the app. Therefore, evaluating the time of developing an app is also important. Besides, some improvements still could be made in the future. For example, the app can render the frame of images directly instead of covering a mask on one person's face. Using the newer AR-kit2 and ML-kit2 is also an option in the development of the project in the future.</p>
+											</section>
+										</div>
+								</div>
 						</section>
 
 					<!-- Two -->
-						<section class="wrapper style1 container special">
+						<!-- <section class="wrapper style1 container special">
 							<div class="row">
 								<div class="col-4 col-12-narrower">
 
@@ -103,7 +149,7 @@
 
 								</div>
 							</div>
-						</section>
+						</section> -->
 
 				</article>
 

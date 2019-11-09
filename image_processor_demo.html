@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Twenty by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="./canvas.js"></script>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Kai-Ning, Keng</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">About</a></li>
+							<li><a href="https://drive.google.com/file/d/1iGO_TyzqrfM0D2EVbxhTkQ9KnvCo8FJW/view?usp=sharing" target="_blank">CV</a></li>
+							<li><a href="#portfolio" class="scrolly">Portfolio</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<!-- One -->
+						<section class="wrapper style4 container">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+
+										<header>
+											<h3>Computer Visison Project- Edge Detection Operater</h3>
+										</header>
+										<p>There are many operators to perform edge detection in a computer. Detecting the edge is important in computer vision because computers could know the shape of image and do further calculation to detect objects.
+										<br>In this project, you will know about edge detection and convolution calculation with visualization demonstration. </p>
+										<p>A digital image is an object which is displayed by pixel, which is a small color box. Every picture you see on your monitor is the combination of pixels. You could directly see pixels in straintforward in below picture.</p>
+										<canvas id="ex_show_pixel" width="400" height="280"></canvas>
+										<canvas id="detail_info" width="200" height="200"></canvas>
+									</section>
+								</div>
+
+						</section>
+
+					<!-- Two -->
+						<section class="wrapper style1 container special">
+							<div class="row">
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>This is Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>Also Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>Probably Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+							</div>
+						</section>
+
+				</article>
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+			  var width = 400;
+			  var height = 280;
+			  var body = document.getElementsByTagName("body")[0];
+			  var canvas=new Canvas("ex_Img",width,height);
+			  var gray_canvas = new Canvas("gray_Img",width,height);
+			  var edge_canvas = new Canvas("edge_Img",width,height);
+			  var imageFrame,ex_pixel_image,detail_info,imageData;
+			  canvas.displayCanvas(body);
+			  gray_canvas.displayCanvas(body);
+			  edge_canvas.displayCanvas(body);
+			  var pixelImg=new Image();
+			  // The demonstration of the fundemental conept of the image pixel
+			  pixelImg.onload = function(){
+			    ex_pixel_image=document.getElementById("ex_show_pixel");
+			    var ex_ctx=ex_pixel_image.getContext("2d");
+			    ex_ctx.drawImage(pixelImg,0,0,width,height);
+			    ex_pixel_image.addEventListener('mousemove',function(e){
+			      var cursorPos=getcursorPos(ex_pixel_image,e);
+			      var partialPixelSets=getPixels(ex_pixel_image,cursorPos.x,cursorPos.y);
+			      detail_info=document.getElementById("detail_info");
+			      var msg = "Current Location : "+cursorPos.x+","+cursorPos.y;
+			      writeMessage(detail_info,msg,partialPixelSets);
+			    },false)
+			  }
+			  pixelImg.src="./images/pixelImg.jpg"
+			  var image = new Image();
+			  image.onload = function(){
+			    canvas.drawCanvas(image);
+			    imageData = canvas.getImage()
+			    //Proceesing image to GrayScale Image
+			    imageFrame= new ImageFrame(imageData,width,height,3);
+			    imageFrame.RGBtoGrayImage();
+			    gray_canvas.putImage(imageFrame.getContext());
+			    //Use Edge detection filter and show the image
+			    var result = imageFrame.filtering(getmask());
+			    edge_canvas.putImage(result.getContext());
+			  }
+			  image.src="./sample.jpg"
+			  function setGaussian(){
+			    var isGfilter=document.getElementById('isGfilter');
+			    imageData = canvas.getImage()
+			    imageFrame= new ImageFrame(imageData,width,height,3);
+			    imageFrame.RGBtoGrayImage();
+			    if(isGfilter.checked){
+			      imageFrame=imageFrame.filtering([[0.075,0.125,0.075],[0.125,0.200,0.125],[0.075,0.125,0.075]]);
+			      gray_canvas.putImage(imageFrame.getContext());
+			      var result = imageFrame.filtering(getmask());
+			      edge_canvas.putImage(result.getContext());
+			    }else{
+			      gray_canvas.putImage(imageFrame.getContext());
+			      var result = imageFrame.filtering(getmask());
+			      edge_canvas.putImage(result.getContext());
+			    }
+			  }
+			  function getPixelStr(pixel){
+			    if(pixel<16){
+			      return "0"+pixel.toString(16);
+			    }else{
+			      return pixel.toString(16);
+			    }
+			  }
+			  function getPixels(canvas,x,y){
+			    var imageData= canvas.getContext("2d").getImageData(0,0,width,height);
+			    // var str = "#"+imageData.data[(y*width+x)*4].toString(16)+imageData.data[(y*width+x)*4+1].toString(16)+imageData.data[(y*width+x)*4+2].toString(16);
+			    var str=new Array(9);
+			    var index=0;
+			    var redStr,greenStr,blueStr;
+			    for(var i=-1;i<2;i++){
+			       for(var j=-1;j<2;j++){
+			         var currentPixel=((y+i)*width+(x+j))*4
+			         if(currentPixel>=0&&currentPixel<=imageData.data.length){
+			           redStr=getPixelStr(imageData.data[currentPixel]);
+			           greenStr=getPixelStr(imageData.data[currentPixel+1]);
+			           blueStr=getPixelStr(imageData.data[currentPixel+2]);
+			           str[index]="#"+redStr+greenStr+blueStr;
+			         }else{
+			           str[index]="#FFFFFF"
+			         }
+			         index++;
+			       }
+			    }
+			    return str;
+			  }
+			  function writeMessage(canvas,msg,pixels){
+			    var ctx= canvas.getContext("2d");
+			    ctx.clearRect(0,0,200,200);
+			    ctx.fillStyle="22px Arial"
+			    ctx.fillText(msg,20,20);
+			    for(var i=0;i<pixels.length;i++){
+			      ctx.fillStyle=pixels[i];
+			      ctx.fillRect(20+(i%3)*30,30+Math.floor(i/3)*30,30,30);
+			    }
+			    ctx.fillStyle="#000000";
+			    ctx.fillText(pixels[4].toUpperCase(),40,150);
+			  }
+			  function getcursorPos(canvas,e){
+			    var rec=canvas.getBoundingClientRect();
+			    return {x:Math.round(e.clientX-rec.left),y:Math.round(e.clientY-rec.top)};
+			  }
+			  function setmaskTable(mask){
+			    var maskInput = document.getElementsByClassName('mask');
+			    for(var i=0;i<mask.length;i++){
+			      for(var j=0;j<mask[i].length;j++){
+			        maskInput[i*mask[i].length+j].value=mask[i][j];
+			      }
+			    }
+			  }
+			  function getmask(){
+			    var filter=document.getElementById("filter");
+			    var mask = [[0,0,0],[0,0,0],[0,0,0]];
+			      switch (parseInt(filter.value)) {
+			        case 1:
+			          mask=[[-1,-1,-1],[-1,8,-1],[-1,-1,-1]];
+			          break;
+			        case 2:
+			          mask=[[-1,0,1],[-1,0,1],[-1,0,1]];
+			          break;
+			        case 3:
+			          mask=[[-1,-1,-1],[0,0,0],[1,1,1]];
+			          break;
+			        case 4:
+			          mask=[[-1,0,1],[-2,0,2],[-1,0,1]];
+			          break;
+			        case 5:
+			          mask=[[1,2,1],[0,0,0],[-1,-2,-1]];
+			          break;
+			        case 6:
+			          var maskInput = document.getElementsByClassName('mask');
+			          for(var i=0;i<mask.length;i++){
+			            for(var j=0;j<mask[i].length;j++){
+			              mask[i][j]=maskInput[i*mask[i].length+j].value;
+			            }
+			          }
+			          break;
+			        case 7:
+			          var sigma = 1 ;//Later get the value
+			          var gau_value ;
+			          var sum=0.0;
+			          for (var i=0;i<mask.length;i++){
+			            for(var j=0;j<mask[i].length;j++){
+			              var distance = Math.pow((j-1),2)+Math.pow((i-1),2)
+			              gau_value = 1/(2*Math.PI*Math.pow(sigma,2)) * Math.exp(-distance/(2*Math.pow(sigma,2)))
+			              mask[i][j]=Math.round((gau_value*100))/100;
+			              sum+=Math.round((gau_value*100))/100
+			            }
+			          }
+			          for (var i=0;i<mask.length;i++){
+			            for(var j=0;j<mask[i].length;j++){
+			              mask[i][j]/=sum;
+			            }
+			          }
+			          break;
+			        default:
+			          mask=[[0,0,0],[0,1,0],[0,0,0]];
+			          break;
+			      }
+			      setmaskTable(mask);
+			      return mask;
+			  }
+			  function calFilter(value){
+			    var filterMask;
+			    if(value<0){
+			      document.getElementById("filter").value=6;
+			    }
+			    filterMask = getmask();
+			    var result = imageFrame.filtering(filterMask);
+			    edge_canvas.putImage(result.getContext());
+			  }
+			  function readFile(input) {
+			       if (input.files && input.files[0]) {
+			           var reader = new FileReader();
+			           reader.onload = function (e) {
+			               image.src=e.target.result;
+			           };
+			           reader.readAsDataURL(input.files[0]);
+			       }
+			   }
+			</script>
+	</body>
+</html>

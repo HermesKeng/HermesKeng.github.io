@@ -3408,6 +3408,10 @@ input, select, textarea {
 		text-decoration: underline;
 		color:#080808;
 	}
+	.content-list{
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
 	.center-image {
 	  display: block;
 	  margin-left: auto;
