@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Twenty by HTML5 UP</title>
+		<title>Kai-Ning Keng - KusoCam</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,12 +17,12 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Twenty <span>by HTML5 UP</span></a></h1>
+					<h1 id="logo"><a href="index.html">Kai-Ning, Keng</a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
-							 
-							<li><a href="#" class="button primary">Sign Up</a></li>
+							<li><a href="index.html">About</a></li>
+							<li><a href="https://drive.google.com/file/d/1iGO_TyzqrfM0D2EVbxhTkQ9KnvCo8FJW/view?usp=sharing" target="_blank">CV</a></li>
+							<li><a href="#portfolio" class="scrolly">Portfolio</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -30,17 +30,11 @@
 			<!-- Main -->
 				<article id="main">
 
-					<header class="special container">
-						<span class="icon solid fa-mobile-alt"></span>
-						<h2>And finally there's <strong>No Sidebar</strong></h2>
-						<p>Where that in the center faces the nameless horrors alone.</p>
-					</header>
-
 					<!-- One -->
-						<section class="wrapper style4 container">
+						<section class="wrapper style4 container project-content">
 
 							<!-- Content -->
-								<div class="content">
+								<!-- <div class="content">
 									<section>
 										<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
 										<header>
@@ -50,12 +44,77 @@
 										<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique. Sed id sem et massa ornare pellentesque. Maecenas pharetra porta accumsan. </p>
 										<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus, non hendrerit ipsum arcu tristique est.</p>
 									</section>
+								</div> -->
+								<div class="row">
+									<div class="col-5 col-12-narrower">
+										<section>
+											<header>
+												<h2>KusoCam</h2>
+											</header>
+											<p>An app to simulate make-up effects based on computer computer vision framework in iOS system</p>
+											<ul>
+												<li>Project Period: Apr. 2018 - May 2018</li>
+												<li>Project Duration: One Month</li>
+												<li>Project Supervisor: Dalton Lin</li>
+												<li>Project Type: Individual Class Project</li>
+											</ul>
+										</section>
+									</div>
+									<div class="col-7 col-12-narrower">
+										<a href="#" class="image featured"><img src="images/kusocam.png" alt="" /></a>
+									</div>
 								</div>
+								<div class="row">
+									<div class="col-12 col-12-narrower">
+										<div class="content">
+											<section>
+												<header>
+													<h3><b>Introduction</b></h3>
+												</header>
+												<p>Since many social media platforms, such as Instagram, Facebook, and Snapchat, launched in the world, more and more applications have been published into the platforms to deepen the connection between friends and friends. Face Filter Camera is a kind of interesting applications with the technology of computer vision. The general public can take some fascinating portraits and share pictures with friends in an interesting way. In order to understand the theories behind the application, I developed KusoCam, a computer vision project which simulates make-up functions with iOS AR-kit and vision framework. Users can create a simulated make-up appearance through the camera on their mobile phones. The project aims to apply knowledge of computer vision in our daily life and develop an interesting mobile program to close people’s connections.</p>
+											</section>
+											<section>
+												<p>
+													 <iframe src="https://www.youtube.com/embed/rB0iGAoyuSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</p>
+											</section>
+											<section>
+												<header>
+													<h3><b>System Design</b></h3>
+												</header>
+												<p>In a side of product design, KusoCam was developed from prototyping to production. I sketched a prototype and described a detailed function about the program on the paper. For example, the application has a function to transform the front and the back camera to easily access views on mobile phones. Moreover, KusoCam also enable users to store the image in the library in order to display different photos which users take.</p>
+												<p>In developing process, I drew the wireframe to demonstrate the flow of the application usage.</p>
+												<img src="images/kusocam_prototype.png" class="center-image" alt="" />
+												<ol>
+													<li>The app displays a splash screen. KusoCam demonstrates an fascinating style to demonstrate that the application was fun and interesting.</li>
+													<li>Users are able to see our main function in our app. The camera captures and processes the image in each frame on the iOS devices.</li>
+													<li>The camera continuously detected if there is a face of a person in each frame.</li>
+													<li>If a user is captured by camera, the system changes the outlook of a person and produced simulated making-up effects depended on a user’s setting.</li>
+												</ol>
+												<section>
+													<div class=row>
+													<div class="col-6 col-12-narrower">
+														<img src="images/kusocam_process.jpeg" class="col-center-image" alt="" />
+													</div>
+													<div class="col-6 col-12-narrower">
+														<img src="images/kusocam_research.jpeg" class="col-center-image" alt="" />
+													</div>
+												</div>
+												</section>
+												<p>In a side of technical development, I used AR-kit and Vision Framework, both of them are well-known for developing a computer vision mobile app on iOS platforms after Apple published in the WWDC 2017. With the convenience of AR-kit and Vision Framework, developers could easily create a computer vision program by calling API. The iOS system requests the face detection. Then, the system could display the position of eight features (Outer lip, inner lip, left eye’s brow, right eye’s brow, left eye, right eye, nose, and nose middle) on a user's face by the built-in detecting algorithm. After I changed the color in terms of the positions of featured points in frames. Making-up effect on a person could be exhibited in our app. In addition, I also took different usual colors on makeup product as reference to closely demonstrate different making-up effects on one person.</p>
+											</section>
 
+												<header>
+													<h3><b>Review</b></h3>
+												</header>
+												<p>The project not only let me take an insight into the computer vision framework and AR-kit but also know the development of an iOS app in detail. After the previous experience in my senior project (link), I start to make a prototype prior to implementation. Prototyping offers a beneficial effect on the development of a mobile app since I can understand the flow of user interfaces. Due to the time constrant, I didn't finish all function in the app. Therefore, evaluating the time of developing an app is also important. Besides, some improvements still could be made in the future. For example, the app can render the frame of images directly instead of covering a mask on one person's face. Using the newer AR-kit2 and ML-kit2 is also an option in the development of the project in the future.</p>
+											</section>
+										</div>
+								</div>
 						</section>
 
 					<!-- Two -->
-						<section class="wrapper style1 container special">
+						<!-- <section class="wrapper style1 container special">
 							<div class="row">
 								<div class="col-4 col-12-narrower">
 
@@ -103,7 +162,7 @@
 
 								</div>
 							</div>
-						</section>
+						</section> -->
 
 				</article>
 
