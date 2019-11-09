@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Twenty by HTML5 UP</title>
+		<title>Kai-Ning Keng - Image Processor Demo</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -57,14 +57,16 @@
 												<div class="row">
 													<div class="col-6 col-12-narrower">
 														<p>Edge Detection Filter Mask </p>
-													 	<input type='file' onchange="readFile(this)" />
+
 													</div>
 													<div class="col-6 col-12-narrower">
-														<p>Try Gaussian Before Image Processing</p>
-													  <label class="switch">
-													    <input id="isGfilter" type="checkbox" onchange="setGaussian()">
-													    <span class="slider"></span>
-													  </label>
+														<p>Try Gaussian Before Image Processing
+															<!-- <label class="switch">
+														    <input id="isGfilter" type="checkbox" onchange="setGaussian()">
+														    <span class="slider"></span>
+													  	</label> -->
+														</p>
+
 													</div>
 												</div>
 
@@ -97,7 +99,14 @@
 												      </tr>
 										    		</table>
 													</div>
-													<div class="col-6 col-12-narrower img-processing-demo" id="img-processing-ori-pic">
+													<div class="col-6 col-12-narrower img-processing-demo">
+														<div id="img-processing-ori-pic"></div>
+														<div>
+															<label class="button">
+																<input class="image-processing-upload-file" type='file' onchange="readFile(this)" />
+																Upload Image
+															</label>
+														</div>
 													</div>
 												</div>
 												<div class="row">

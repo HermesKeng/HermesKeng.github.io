@@ -3457,10 +3457,12 @@ input, select, textarea {
 		width:100%;
 	}
 	.img-processing-project .switch {
+
 	  position: relative;
 	  display: inline-block;
 	  width: 60px;
 	  height: 34px;
+		margin-left: 0.5em;
 	}
 
 	/* Hide default HTML checkbox */
@@ -3469,6 +3471,7 @@ input, select, textarea {
 	/* The slider */
 	.img-processing-project .slider {
 	  position: absolute;
+		vertical-align: text-bottom;
 	  cursor: pointer;
 	  top: 0;
 	  left: 0;
@@ -3515,8 +3518,16 @@ input, select, textarea {
 	}
 	.img-demo-custom p{
 		margin-bottom: 1.5em;
+		text-align: center;
+	}
+	.img-demo-custom input{
+		margin-bottom: 1.5em;
+		text-align: center;
 	}
 
 	.img-demo-custom .row{
 		margin-bottom: 2.5em;
+	}
+	.image-processing-upload-file{
+		display: none;
 	}
