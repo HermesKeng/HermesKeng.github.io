@@ -3449,7 +3449,7 @@ input, select, textarea {
     width: 100%;
     align:middle;
   }
-	.img-processing-project .col-center-image {
+	.col-center-image {
 	  display: block;
 	  margin-left: auto;
 	  margin-right: auto;
@@ -3460,7 +3460,7 @@ input, select, textarea {
 
 	  position: relative;
 	  display: inline-block;
-				vertical-align: middle;
+		vertical-align: middle;
 	  width: 60px;
 	  height: 34px;
 		margin-left: 0.5em;
