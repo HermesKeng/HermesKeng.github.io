@@ -3535,3 +3535,8 @@ i{
 	font-style: italic;
 	font-size:0.8em;
 }
+.pic-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
