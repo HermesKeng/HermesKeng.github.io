@@ -71,23 +71,25 @@
 												<header>
 													<h3><b>Introduction</b></h3>
 												</header>
-												<p>After the emergence of the Internet of Things(IoT), many people notice about wireless network technology. LoRa technology, a low-power, wide area network technology, opens an opportunity to transmit data from a remote place to server. With this technology, more and more embedded systems can be established in our daily lives. In this project, we present a LoRa Logistic Service, an online to offline systems for users to send a packages to a destination through a mobile app and a self-driving car system with LoRa Technology. The goal of the project is to make our lives more convenient and reduce human cost of sending packages and implement the proof of the concept of logistic service on campus in order to achieve "Smart City". </p>
+
+												<p><i>* This project is funded by College Student Research Scholarship, Ministry of Science and Technology, Taiwan and won the first place in the senior project competition at NTPU</i><br>After the emergence of the Internet of Things(IoT), many people notice about wireless network technology. LoRa technology, a low-power, wide area network technology, opens an opportunity to transmit data from a remote place to server. With this technology, more and more embedded systems can be established in our daily lives. In this project, we present a LoRa Logistic Service, an online to offline service for users to send packages to a destination through a mobile app and a self-driving car system with LoRa Technology. The goal of the project is to reduce human cost of sending packages and implement the proof of concept of lauching a logistic service on campus in order to achieve "Smart City". </p>
 												<p>
 													<iframe src="https://www.youtube.com/embed/IKHZwInGJkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 												</p>
 											</section>
 											<section>
 												<header>
-													<h3><b>System Design</b></h3>
+													<h3><b>System Architecture and Design</b></h3>
 												</header>
 												<p>There are four parts in our application- a LoRa gateway, a mobile app, and a server, and a self-driving car. </p>
+												<img src="images/lora_logistic_architecture.jpeg" class="center-image" alt="" />
 												<ul>
-													<li>Server:<br>​The server is the main part of our application. The sever can send the data to the mobile app and LoRa gateways as a notification while arrivals of the time that users register a delivery service. It also includes a database to store records of registering services.</li>
-													<li>LoRa Gateway:<br>The role of Lo​Ra gateway is the mid point of server and self-driving car. The LoRa gateway can communicate with the server through a wired/wireless network. The gateway also can deliver the signals sent from the server to the self-driving car through LoRa Technology.</li>
+													<li>Server:<br>​The server is the main part of our application. The sever can send the data to the mobile app and LoRa gateways as a notification while arrivals of the time that users register a delivery service. It also connects to a database to store the records and arrange schedules.</li>
+													<li>LoRa Gateway:<br>The role of Lo​Ra gateway is the mid point of the server and the self-driving car. The LoRa gateway can communicate with the server through a tranditional wired/wireless network, such as Wi-Fi or Ethernet. The gateway also embedded a LoRa module can deliver the signals back and forth from the server to the self-driving car.</li>
 													<li>Server:<br>​The self-driving car is an improved version of an electronic wheel car. It includes a GPS module, a LoRa module, a Raspberry Pi, and a control handle. The LoRa module can receive messages from LoRa gateways to get a notification which requests from a user. GPS module tracks the position of the car and calculate the path from a start point to a destination with an improved A* algorithm.</li>
-													<li>Mobile App:<br>​Mobile app serves as a medium for user to utilize our service. User can track orders, register the service, and look for history records in the mobile app. It also includes an account system to maintain users' data from the service.​​​</li>
+													<li>Mobile App:<br>​Mobile app serves as a medium for user to register our service. It includes an account system to maintain users' data from the service.​​​ User also can track orders, register the service, and look for history records in the app.</li>
 												</ul>
-												<p>In the system, we settle a "state" mechanism in order to manage the car status in the service. The car has five different states while it is working. </p>
+												<p>In the system, we settle a "state" mechanism to manage the car status in the service. The car has five different states while working. </p>
 												<ol>
 													<li>Establish the Order</li>
 													<li>When the car arrives at a sender's location, the car wait for a sender to give a package</li>
@@ -95,22 +97,34 @@
 													<li>When the car arrives at the receiver's location, the car wait for the receive to get the package</li>
 													<li>The receiver successfully get the package and the car complete the task.</li>
 												</ol>
-												<p>The communication between the LoRa gateway and the car is through LoRa wireless network. With LoRa Technology, data can easily be delivery in a long distance. For the 59 area of acres on campus, we merely settle one LoRa gateway to transmit data between the car and gateway back and forth. However, there is still a problem for data transmission. The data transmission between the gateway and the car relies on UDP protocol, which means the data is possibly lost in the procedure. To address issue, we implement a mechanism of reliable data transfer 3.0(RDT 3.0) to resolve the problem of losing data (Figure 2).</p>
+												<p>The communication between the LoRa gateway and the car is through LoRa wireless network. Data can easily be deliveried in a long distance with merely one base station. For the 59 area of acres on campus, we merely settle one LoRa gateway to transmit data between the car and gateway back and forth. However, there is still a problem for data transmission. The data transmission between the gateway and the car relies on UDP protocol, which means the data is possibly lost in the procedure. To address issue, we implement a mechanism of reliable data transfer 3.0(RDT 3.0) to resolve the problem of losing data.</p>
+												<img src="images/lora_logistic_rdt.jpeg" class="center-image" alt="" />
 											</section>
 											<section>
-
+												<header>
+													<h3><b>System Architecture and Design</b></h3>
+												</header>
+												<p>​From our senior project, we built up a mobile app from prototyping to a real application (Flows are showed as below). Prototyping is an indispensable process of creating an Android application. We can clairfy user requirements, collect user opinions, and reduce developing time cost with app prototyping.</p>
+												<div class=row>
+													<div class="col-6 col-12-narrower">
+														<img src="images/lora_logistic_flow1.jpeg" class="col-center-image" alt="" />
+													</div>
+													<div class="col-6 col-12-narrower">
+														<img src="images/lora_logistic_flow2.jpeg" class="col-center-image" alt="" />
+													</div>
+												</div>
 											</section>
 											<section>
 												<header>
 													<h3><b>My Role In The Project</b></h3>
 												</header>
-												<p>There are two parts of works in my senior project. For the first part,  I conduct research in how to use LoRa module with Raspberry Pi to send and receive data. I cooperate with another group member to complete the experiment to make sure the data can be sent and receive through all campus. I discover that the gateway should be installed in a high place, where can avoid losing data which sends from LoRa gateway. For the second part, I create a gateway program which data can be delivered between a self-driving car and a gateway through LoRa and between a server and a gateway with wireless network by TCP socket. Besides, I also serve as user interface designer and Android developer to design the user interface of our application and complete the front-end program of the Android app.</p>
+												<p>There are two parts of works in my senior project. For the first part,  I conducted research in how to use LoRa module with Raspberry Pi to send and receive data. I cooperated with another group member to complete the experiment to make sure the data can be sent and receive through all campus. I discovered that the gateway should be installed in a high place, where can avoid losing data sent by LoRa gateway. For the second part, I created a gateway program which data can be delivered between a self-driving car and a gateway through LoRa and between a server and a gateway with wireless network by TCP socket. Besides, I also served as user interface designer and Android developer to design and complete the Android app.</p>
 											</section>
 											<section>
 												<header>
 													<h3><b>Review</b></h3>
 												</header>
-												<p>From this project, I learn how to cooperate with others to create a technology application from zero to one. We come up with different ideas and try to converge diverse applications into our final application. In a long period of project development, we even use Git to make a version control in order to maintain our project efficiently. Moreover, the LoRa application makes me get concepts of coding with terminal and use command line in an embedded system. I also deepen the knowledge of creating a prototype and making an Android app.  </p>
+												<p>From this project, I learned how to cooperate with others to create a technology application from zero to one. We converged diverse applications (like.. mid-point signal transfer, LoRa weather box, and LoRa vending machine) into our final application. I also devled in to the area of network systems and utilized my understanding in network systems to implement the protocal. In a long period of project development, we even use Git to maintain our project efficiently. Moreover, the LoRa application made me get concepts of coding with terminal and use command line in an embedded system. I also deepen the knowledge of creating a prototype and developin an Android app.  </p>
 											</section>
 										</div>
 								</div>

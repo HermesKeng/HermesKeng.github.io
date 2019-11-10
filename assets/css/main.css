@@ -3531,3 +3531,7 @@ input, select, textarea {
 	.image-processing-upload-file{
 		display: none;
 	}
+i{
+	font-style: italic;
+	font-size:0.8em;
+}
